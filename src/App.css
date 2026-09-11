@@ -9,7 +9,12 @@
 body {
   margin: 0;
   min-width: 320px;
-  background: #F6F0E6;
+  background-color: #F6F0E6;
+  background-image: url('/design/Main-Background.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 button,
@@ -49,10 +54,13 @@ main {
   overflow: hidden;
   padding: clamp(28px, 5vw, 64px);
   color: #F6F0E6;
-  background: #18252B;
+  background-color: #18252B;
+  background-image: url('/design/Hero-Counter.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-/* VY MOTIF SLOT: /design/malventory-hero-motif.png, 1600 x 420px. */
 .hero-shell::before {
   position: absolute;
   top: 0;
@@ -82,13 +90,16 @@ main {
 
 .brand-mark span {
   display: grid;
-  width: 32px;
-  height: 32px;
+  width: 42px;
+  height: 42px;
   place-items: center;
-  color: #18252B;
-  background: #F6F0E6;
-  font-size: 12px;
-  transform: rotate(-8deg);
+  color: transparent;
+  background-color: #18252B;
+  background-image: url('/design/Logo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px;
 }
 
 .eyebrow {
@@ -169,18 +180,12 @@ h1 {
   margin: 32px 0;
   padding: 24px;
   border: 1px solid #DCCCB8;
-  background: #EDE2D2;
-}
-
-/* VY MOTIF SLOT: /design/malventory-form-texture.png, 720 x 220px. */
-.control-bar::before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 12px;
-  content: "";
-  background: #C84B2F;
+  overflow: hidden;
+  background-color: #EDE2D2;
+  background-image: url('/design/Search-Bar-and-Watch.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .search-control,
@@ -194,9 +199,16 @@ h1 {
 .inventory-form label {
   display: grid;
   gap: 7px;
-  color: #18252B;
   font-size: 13px;
   font-weight: 800;
+}
+
+.search-control label {
+  color: #18252B;
+}
+
+.inventory-form label {
+  color: #F6F0E6;
 }
 
 input,
@@ -258,7 +270,11 @@ select {
   margin: 32px 0;
   padding: clamp(24px, 4vw, 42px);
   color: #F6F0E6;
-  background: #315E4A;
+  background-color: #315E4A;
+  background-image: url('/design/New-Item-Form.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .form-heading {
@@ -312,7 +328,12 @@ select {
 }
 
 .inventory-list {
+  background-image: url('/design/Item-List.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
   border-top: 2px solid #18252B;
+  padding-top: 8px;
 }
 
 .inventory-row {
