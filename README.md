@@ -1,6 +1,8 @@
 # Malventory (Malfunctioning Inventory)
 
-<img width="526" height="472" alt="Screenshot 2026-09-11 143213" src="https://github.com/user-attachments/assets/be616188-b879-40d5-b2d8-b49a7729bd41" />
+<img width="952" height="539" alt="Screenshot 2026-09-11 183343" src="https://github.com/user-attachments/assets/177cd39a-3593-4358-ad81-27fd4281e8a1" />
+
+<img width="952" height="539" alt="Screenshot 2026-09-11 183351" src="https://github.com/user-attachments/assets/441ff8c4-5e30-4346-9905-b8aba53f1697" />
 
 This is the final working solution code.
 
