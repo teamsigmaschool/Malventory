@@ -328,7 +328,6 @@ select {
 }
 
 .inventory-list {
-  background-image: url('/design/Item-List.png');
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 100% auto;
