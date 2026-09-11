@@ -1,0 +1,72 @@
+[
+  {
+    "id": 101,
+    "name": "Cedar Kitchen Towels",
+    "sku": "CKT-04",
+    "category": "Home goods",
+    "aisle": "Aisle 2",
+    "quantity": 7,
+    "reorderLevel": 8,
+    "unit": "packs"
+  },
+  {
+    "id": 102,
+    "name": "Brewline Coffee Filters",
+    "sku": "BCF-12",
+    "category": "Pantry",
+    "aisle": "Aisle 4",
+    "quantity": 24,
+    "reorderLevel": 10,
+    "unit": "boxes"
+  },
+  {
+    "id": 103,
+    "name": "Amber Glass Bottles",
+    "sku": "AGB-08",
+    "category": "Packaging",
+    "aisle": "Aisle 1",
+    "quantity": 4,
+    "reorderLevel": 6,
+    "unit": "crates"
+  },
+  {
+    "id": 104,
+    "name": "Field Notes Journal",
+    "sku": "FNJ-22",
+    "category": "Stationery",
+    "aisle": "Aisle 6",
+    "quantity": 18,
+    "reorderLevel": 8,
+    "unit": "copies"
+  },
+  {
+    "id": 105,
+    "name": "Olive Storage Baskets",
+    "sku": "OSB-03",
+    "category": "Home goods",
+    "aisle": "Aisle 3",
+    "quantity": 3,
+    "reorderLevel": 5,
+    "unit": "pieces"
+  },
+  {
+    "id": 106,
+    "name": "Grounded Chai Blend",
+    "sku": "GCB-17",
+    "category": "Pantry",
+    "aisle": "Aisle 4",
+    "quantity": 11,
+    "reorderLevel": 6,
+    "unit": "tins"
+  },
+  {
+    "id": 107,
+    "name": "Receipt Paper Rolls",
+    "sku": "RPR-09",
+    "category": "Operations",
+    "aisle": "Counter",
+    "quantity": 2,
+    "reorderLevel": 4,
+    "unit": "rolls"
+  }
+]

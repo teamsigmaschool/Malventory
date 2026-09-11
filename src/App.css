@@ -1,0 +1,499 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  font-family: "Avenir Next", "Gill Sans", sans-serif;
+  color: #18252B;
+  background: #F6F0E6;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #F6F0E6;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+input,
+select {
+  border-radius: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #8F301D;
+  outline-offset: 3px;
+}
+
+main {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: 28px clamp(16px, 4vw, 36px) 64px;
+}
+
+.hero-shell {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  gap: clamp(28px, 5vw, 72px);
+  overflow: hidden;
+  padding: clamp(28px, 5vw, 64px);
+  color: #F6F0E6;
+  background: #18252B;
+}
+
+/* VY MOTIF SLOT: /design/malventory-hero-motif.png, 1600 x 420px. */
+.hero-shell::before {
+  position: absolute;
+  top: 0;
+  right: 28%;
+  bottom: 0;
+  width: 1px;
+  content: "";
+  opacity: 0.5;
+  background: #DCCCB8;
+}
+
+.hero-copy,
+.hero-stats {
+  position: relative;
+  z-index: 1;
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 42px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.brand-mark span {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  color: #18252B;
+  background: #F6F0E6;
+  font-size: 12px;
+  transform: rotate(-8deg);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: inherit;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Rockwell, "Arial Narrow", serif;
+}
+
+h1 {
+  max-width: 650px;
+  margin-bottom: 18px;
+  font-size: clamp(42px, 6vw, 78px);
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+.hero-description {
+  max-width: 540px;
+  margin-bottom: 0;
+  color: #DCCCB8;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.hero-stats {
+  align-self: end;
+  border-top: 1px solid #DCCCB8;
+}
+
+.hero-stats div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid #DCCCB8;
+}
+
+.hero-stats span {
+  color: #F6F0E6;
+  font-family: Rockwell, "Arial Narrow", serif;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.hero-stats p {
+  margin: 0;
+  color: #DCCCB8;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hero-stats .attention-stat span {
+  color: #FFB5A7;
+}
+
+.control-bar {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px 28px;
+  margin: 32px 0;
+  padding: 24px;
+  border: 1px solid #DCCCB8;
+  background: #EDE2D2;
+}
+
+/* VY MOTIF SLOT: /design/malventory-form-texture.png, 720 x 220px. */
+.control-bar::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 12px;
+  content: "";
+  background: #C84B2F;
+}
+
+.search-control,
+.control-actions,
+.watch-status {
+  position: relative;
+  z-index: 1;
+}
+
+.search-control label,
+.inventory-form label {
+  display: grid;
+  gap: 7px;
+  color: #18252B;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid #B8A995;
+  padding: 10px 12px;
+  color: #18252B;
+  background: #FFFCF7;
+}
+
+.control-actions {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  gap: 12px;
+}
+
+.primary-button,
+.quantity-button,
+.delete-button,
+.text-button {
+  min-height: 42px;
+  border: 0;
+  padding: 10px 15px;
+  font-weight: 800;
+}
+
+.primary-button {
+  color: #FFFFFF;
+  background: #C84B2F;
+}
+
+.primary-button:hover {
+  background: #8F301D;
+}
+
+.text-button {
+  color: #18252B;
+  background: transparent;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.watch-status {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: #315E4A;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.paused-status {
+  color: #8F301D;
+}
+
+.inventory-form {
+  margin: 32px 0;
+  padding: clamp(24px, 4vw, 42px);
+  color: #F6F0E6;
+  background: #315E4A;
+}
+
+.form-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.form-heading h2 {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.form-heading .text-button {
+  color: #F6F0E6;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.inventory-section {
+  padding-top: 24px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
+  font-size: clamp(32px, 5vw, 56px);
+  letter-spacing: -0.05em;
+}
+
+.section-heading > p {
+  margin-bottom: 8px;
+  color: #6C6258;
+  font-weight: 700;
+}
+
+.inventory-list {
+  border-top: 2px solid #18252B;
+}
+
+.inventory-row {
+  display: grid;
+  grid-template-columns: minmax(180px, 1.35fr) minmax(100px, 0.5fr) minmax(130px, 0.65fr) minmax(260px, 1fr);
+  align-items: center;
+  gap: 20px;
+  padding: 22px 0;
+  border-bottom: 1px solid #D0C0AC;
+}
+
+.low-stock-row {
+  padding-right: 16px;
+  padding-left: 16px;
+  border-bottom-color: #B3261E;
+  background: #F1DCD5;
+}
+
+.item-identity h3 {
+  margin-bottom: 4px;
+  font-size: 23px;
+  letter-spacing: -0.035em;
+}
+
+.item-identity p:not(.eyebrow) {
+  margin-bottom: 0;
+  color: #6C6258;
+}
+
+.item-stock {
+  display: grid;
+  gap: 1px;
+  color: #6C6258;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.stock-number {
+  color: #18252B;
+  font-family: Rockwell, "Arial Narrow", serif;
+  font-size: 34px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 7px 9px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.low-stock {
+  color: #FFFFFF;
+  background: #B3261E;
+}
+
+.stable-stock {
+  color: #FFFFFF;
+  background: #315E4A;
+}
+
+.item-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: 8px;
+}
+
+.quantity-button {
+  color: #18252B;
+  border: 1px solid #A59480;
+  background: #F6F0E6;
+}
+
+.quantity-button:hover {
+  background: #DCCCB8;
+}
+
+.quantity-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.delete-button {
+  color: #8F301D;
+  background: transparent;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.empty-state {
+  margin-top: 20px;
+  padding: 42px;
+  border: 1px dashed #A59480;
+  text-align: center;
+}
+
+.empty-state h2 {
+  margin-bottom: 18px;
+  font-size: 30px;
+}
+
+@media (max-width: 800px) {
+  .hero-shell,
+  .control-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stats {
+    max-width: none;
+  }
+
+  .control-actions {
+    justify-content: start;
+  }
+
+  .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .inventory-row {
+    grid-template-columns: minmax(0, 1fr) minmax(110px, 0.5fr);
+  }
+
+  .item-status,
+  .item-actions {
+    grid-column: auto / span 2;
+  }
+
+  .item-actions {
+    justify-content: start;
+  }
+}
+
+@media (max-width: 520px) {
+  main {
+    padding-top: 16px;
+  }
+
+  .hero-shell,
+  .control-bar,
+  .inventory-form {
+    padding: 24px;
+  }
+
+  .brand-mark {
+    margin-bottom: 28px;
+  }
+
+  .form-heading,
+  .section-heading {
+    display: block;
+  }
+
+  .form-heading .text-button {
+    margin-top: 14px;
+  }
+
+  .section-heading > p {
+    margin-top: 12px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .control-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .control-actions button {
+    width: 100%;
+  }
+
+  .inventory-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .item-status,
+  .item-actions {
+    grid-column: auto;
+  }
+}
